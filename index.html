@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="مكتبة ألعاب PS4 - شركة الربيع لأجهزة الألعاب">
+  <title>شركة الربيع | مكتبة ألعاب PS4</title>
+  <link rel="preconnect" href="https://en.wikipedia.org">
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">RABI<span>3</span></div>
+      <div>
+        <div class="brand-name">شركة الربيع لأجهزة الألعاب</div>
+        <div class="brand-slogan">خبرة سنين بتفرق</div>
+      </div>
+    </div>
+    <div class="branches"><span>سموحة</span><span>سان ستيفانو</span><span>ميامي</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">PS4 GAME LIBRARY</span>
+        <h1>اختار ألعابك قبل ما تيجي الفرع 🎮</h1>
+        <p>استعرض الألعاب المتاحة، شوف صورة اللعبة وتفاصيلها، واضغط <b>أضف لاختياراتي</b> لتجميع الألعاب اللي عايزها.</p>
+        <div class="hero-actions">
+          <button class="primary" id="showSelected">اختياراتي <span id="selectedCount">0</span></button>
+          <button class="ghost" id="copySelected">نسخ قائمة الاختيارات</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div><strong id="totalGames">78</strong><span>لعبة</span></div>
+        <div><strong id="visibleGames">78</strong><span>ظاهرين</span></div>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <div class="searchbox">
+        <span>⌕</span>
+        <input id="search" type="search" placeholder="ابحث باسم اللعبة..." autocomplete="off">
+      </div>
+      <div class="filters" id="filters"></div>
+      <button class="selected-filter" id="toggleSelected">★ اختياراتي</button>
+    </section>
+
+    <section class="catalog-head">
+      <div>
+        <span class="eyebrow">AVAILABLE TITLES</span>
+        <h2>مكتبة الألعاب</h2>
+      </div>
+      <div class="result-note" id="resultNote">78 لعبة متاحة</div>
+    </section>
+
+    <section class="grid" id="grid"></section>
+
+    <div class="empty" id="empty" hidden>
+      <div>🎮</div>
+      <h3>مش لاقيين اللعبة</h3>
+      <p>جرب اسم مختلف أو امسح البحث.</p>
+    </div>
+  </main>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <span class="eyebrow">MY LIST</span>
+        <h2>اختيارات العميل</h2>
+      </div>
+      <button class="close" id="closeDrawer">×</button>
+    </div>
+    <div class="drawer-body" id="selectedList"></div>
+    <div class="drawer-foot">
+      <button class="primary wide" id="copySelected2">نسخ القائمة</button>
+      <button class="ghost wide" id="clearSelected">مسح الاختيارات</button>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <footer>
+    <div><b>شركة الربيع لأجهزة الألعاب</b> — خبرة سنين بتفرق</div>
+    <div>سموحة • سان ستيفانو • ميامي</div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
